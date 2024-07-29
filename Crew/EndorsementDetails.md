@@ -1,29 +1,24 @@
-# Crew - Credit Details
+# Crew - Endorsement Details
 
-## Get Credit Details
+## Get Crew Endorsement Details
 
 ### HTTP Request
 
 ```http
-GET /api/crew/crew-credits/{creditId}
+GET /api/crew/endorsement-from-peers/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Response Body
 
 ```json
 {
-    "id": 8,
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
+    "id": 3,
+    "text": "Text",
+    "givenBy": "givenBy",
     "crew": 22
 }
 ```
@@ -40,7 +35,7 @@ GET /api/crew/crew-credits/{creditId}
 
     ```json
     {
-    "detail": "No CrewCredits matches the given query."
+    "detail": "No Endorsement matches the given query."
     }
     ```
 
@@ -48,29 +43,24 @@ GET /api/crew/crew-credits/{creditId}
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
 
-## Update Credit Details
+## Update Crew Endorsement
 
 ### HTTP Request
 
 ```http
-PUT /api/crew/crew-credits/{creditId}
+PUT /api/crew/endorsement-from-peers/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Request Body
 
 ```json
 {
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
+    "text": "Text",
+    "givenBy": "givenBy",
     "crew": 22
 }
 ```
@@ -79,14 +69,9 @@ PUT /api/crew/crew-credits/{creditId}
 
 ```json
 {
-    "id": 8,
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
+    "id": 3,
+    "text": "Text",
+    "givenBy": "givenBy",
     "crew": 22
 }
 ```
@@ -103,25 +88,25 @@ PUT /api/crew/crew-credits/{creditId}
 
     ```json
     {
-    "detail": "No CrewCredits matches the given query."
+    "detail": "No Endorsement matches the given query."
     }
     ```
 
 - **500** - Internal Server Error
 - **503** - Service Unavailable
-- **504** - Gateway Timeout
+- **503** - Gateway Timeout
 
-## Delete Credit Details
+## Delete Crew Endorsement
 
 ### HTTP Request
 
 ```http
-DELETE /api/crew/crew-credits/{creditId}
+DELETE /api/crew/endorsement-from-peers/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Response Status
 
@@ -132,6 +117,13 @@ DELETE /api/crew/crew-credits/{creditId}
 - **403** - Forbidden
   - User is not a crew
 - **404** - Not Found
+
+    ```json
+    {
+    "detail": "Not found."
+    }
+    ```
+
 - **500** - Internal Server Error
 - **503** - Service Unavailable
 - **504** - Gateway Timeout

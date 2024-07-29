@@ -99,3 +99,10 @@ POST /api/crew/crew-credits/
 - **500** - Internal Server Error
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
+
+### Issue
+
+- Anyone can create a credit for any crew member
+- No validation member if the member is a crew or not
+
+- The crew member should be able to create a credit for themselves only and not for others

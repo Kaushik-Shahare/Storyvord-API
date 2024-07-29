@@ -1,29 +1,23 @@
-# Crew - Credit Details
+# Crew - Social Links Details
 
-## Get Credit Details
+## Get Crew Social Link Details
 
 ### HTTP Request
 
 ```http
-GET /api/crew/crew-credits/{creditId}
+GET /api/crew/social-links/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Response Body
 
 ```json
 {
-    "id": 8,
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
+    "id": 1,
+    "link": "https://www.facebook.com",
     "crew": 22
 }
 ```
@@ -40,7 +34,7 @@ GET /api/crew/crew-credits/{creditId}
 
     ```json
     {
-    "detail": "No CrewCredits matches the given query."
+     "detail": "No SocialLinks matches the given query."
     }
     ```
 
@@ -48,30 +42,23 @@ GET /api/crew/crew-credits/{creditId}
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
 
-## Update Credit Details
+## Update Crew Social Link
 
 ### HTTP Request
 
 ```http
-PUT /api/crew/crew-credits/{creditId}
+PUT /api/crew/social-links/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Request Body
 
 ```json
 {
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
-    "crew": 22
+    "link": "https://www.facebook.com"
 }
 ```
 
@@ -79,14 +66,8 @@ PUT /api/crew/crew-credits/{creditId}
 
 ```json
 {
-    "id": 8,
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
+    "id": 1,
+    "link": "https://www.facebook.com",
     "crew": 22
 }
 ```
@@ -103,7 +84,7 @@ PUT /api/crew/crew-credits/{creditId}
 
     ```json
     {
-    "detail": "No CrewCredits matches the given query."
+     "detail": "No SocialLinks matches the given query."
     }
     ```
 
@@ -111,27 +92,39 @@ PUT /api/crew/crew-credits/{creditId}
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
 
-## Delete Credit Details
+### Issues
+
+- Can we edit the crew id?
+
+## Delete Crew Social Link
 
 ### HTTP Request
 
 ```http
-DELETE /api/crew/crew-credits/{creditId}
+DELETE /api/crew/social-links/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Response Status
 
 - **204** - No Content
+  - Successfully deleted
 - **401** - Unauthorized
   - User is not logged in
   - Token is invalid
 - **403** - Forbidden
   - User is not a crew
 - **404** - Not Found
+
+    ```json
+    {
+     "detail": "No SocialLinks matches the given query."
+    }
+    ```
+
 - **500** - Internal Server Error
 - **503** - Service Unavailable
 - **504** - Gateway Timeout

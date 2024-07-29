@@ -1,29 +1,24 @@
-# Crew - Credit Details
+# Crew - Rate Details
 
-## Get Credit Details
+## Get Crew Rate Details
 
 ### HTTP Request
 
 ```http
-GET /api/crew/crew-credits/{creditId}
+GET /api/crew/crew-rate/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Response Body
 
 ```json
 {
-    "id": 8,
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
+    "id": 5,
+    "standardRate": null,
+    "negotiation": true,
     "crew": 22
 }
 ```
@@ -40,7 +35,7 @@ GET /api/crew/crew-credits/{creditId}
 
     ```json
     {
-    "detail": "No CrewCredits matches the given query."
+    "detail": "No CrewRate matches the given query."
     }
     ```
 
@@ -48,30 +43,24 @@ GET /api/crew/crew-credits/{creditId}
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
 
-## Update Credit Details
+## Update Crew Rate
 
 ### HTTP Request
 
 ```http
-PUT /api/crew/crew-credits/{creditId}
+PUT /api/crew/crew-rate/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Request Body
 
 ```json
 {
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
-    "crew": 22
+    "standardRate": 1000,
+    "negotiation": false
 }
 ```
 
@@ -79,14 +68,9 @@ PUT /api/crew/crew-credits/{creditId}
 
 ```json
 {
-    "id": 8,
-    "title": "Crew Title",
-    "year": "2 years",
-    "role": "xyz",
-    "production": "abc",
-    "client": null,
-    "type_of_content": "Film",
-    "tags": null,
+    "id": 5,
+    "standardRate": 1000,
+    "negotiation": false,
     "crew": 22
 }
 ```
@@ -94,38 +78,37 @@ PUT /api/crew/crew-credits/{creditId}
 ### Response Status
 
 - **200** - OK
+- **400** - Bad Request
+  - Invalid data
 - **401** - Unauthorized
   - User is not logged in
   - Token is invalid
 - **403** - Forbidden
   - User is not a crew
 - **404** - Not Found
-
-    ```json
-    {
-    "detail": "No CrewCredits matches the given query."
-    }
-    ```
-
 - **500** - Internal Server Error
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
 
-## Delete Credit Details
+### Issues
+
+- crew field is not updatable but it is present in the request body. It should be removed from the request body.
+
+## Delete Crew Rate
 
 ### HTTP Request
 
 ```http
-DELETE /api/crew/crew-credits/{creditId}
+DELETE /api/crew/crew-rate/{id}/
 ```
 
 ### Request Headers
 
-- **Authorization**: Bearer {token}
+- **Authorization** - Bearer token
 
 ### Response Status
 
-- **204** - No Content
+- **200** - OK
 - **401** - Unauthorized
   - User is not logged in
   - Token is invalid
