@@ -117,6 +117,8 @@ POST /api/project/projects/
 }
 ```
 
+- **Note** : uploaded_document should be in base64 format.  
+
 ### Response Body
 
 ```json
