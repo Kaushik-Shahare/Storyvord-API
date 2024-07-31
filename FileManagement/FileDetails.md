@@ -16,15 +16,15 @@ GET /api/files/{file_id}
 
 ```json
 {
-    "id": 8,
-    "file": null,
-    "project": "3362a725-ca3c-4499-9f58-a798b34d9926",
+    "id": 26,
     "allowed_users": [
         1,
         2,
-        34,
-        22
-    ]
+        34
+    ],
+    "name": "Cv",
+    "file": null,
+    "folder": 2
 }
 ```
 
@@ -54,8 +54,7 @@ PUT /api/files/{file_id}
 {
     "file": "file",
     "add_users": [1, 2, 6, 3],
-    "remove_users": [3, 6],
-    "project": null
+    "remove_users": [3, 6]
 }
 ```
 
@@ -63,15 +62,15 @@ PUT /api/files/{file_id}
 
 ```json
 {
-    "id": 8,
-    "file": "file",
-    "project": "3362a725-ca3c-4499-9f58-a798b34d9926",
+    "id": 26,
     "allowed_users": [
         1,
         2,
-        34,
-        22
-    ]
+        34
+    ],
+    "name": "Cv",
+    "file": null,
+    "folder": 2
 }
 ```
 
