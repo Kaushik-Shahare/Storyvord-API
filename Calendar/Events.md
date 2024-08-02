@@ -5,7 +5,7 @@
 ### HTTP Request
 
 ```http
-GET /api/calendar/calendars/{calendar_id}/events/
+GET /api/calendar/calendars/{project_id}/events/
 ```
 
 ### Request Headers
@@ -87,6 +87,21 @@ GET /api/calendar/calendars/{calendar_id}/events/
 
 - **200** - OK
 - **401** - Unauthorized
+
+    ```json
+    {
+        "detail": "You do not have permission to access this calendar"
+    }
+    ```
+
+- **404** - Not Found
+
+    ```json
+    {
+        "detail": "Not found."
+    }
+    ```
+
 - **500** - Internal Server Error
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
@@ -96,7 +111,7 @@ GET /api/calendar/calendars/{calendar_id}/events/
 ### HTTP Request
 
 ```http
-POST /api/calendar/calendars/{calendar_id}/events/
+POST /api/calendar/calendars/{project_id}/events/
 ```
 
 ### Request Headers
@@ -135,6 +150,7 @@ POST /api/calendar/calendars/{calendar_id}/events/
 
 - **201** - Created
 - **401** - Unauthorized
+- **404** - Not Found
 - **409** - Conflict
   - Event with the same title and time already exists
 - **500** - Internal Server Error
@@ -147,7 +163,7 @@ POST /api/calendar/calendars/{calendar_id}/events/
 ### HTTP Request
 
 ```http
-PUT /api/calendar/calendars/{calendar_id}/events/{event_id}
+PUT /api/calendar/calendars/{project_id}/events/{event_id}
 ```
 
 ### Request Headers
@@ -199,7 +215,7 @@ PUT /api/calendar/calendars/{calendar_id}/events/{event_id}
 ### HTTP Request
 
 ```http
-DELETE /api/calendar/calendars/{calendar_id}/events/{event_id}
+DELETE /api/calendar/calendars/{project_id}/events/{event_id}
 ```
 
 ### Request Headers

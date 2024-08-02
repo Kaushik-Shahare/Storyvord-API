@@ -126,12 +126,12 @@ GET /api/calendar/calendars/
 
 - We get all calanders of projects where crew member is not a participant. We should only get the calanders of projects where crew member is a participant.
 
-## Get Calendar Event Details
+## Get Calendar Details
 
 ### HTTP Request
 
 ```http
-GET /api/calendar/events/{event_id}
+GET /api/calendar/calendars/{project_id}/
 ```
 
 ### Request Headers
@@ -218,6 +218,7 @@ GET /api/calendar/events/{event_id}
 
 - **200** - OK
 - **401** - Unauthorized
+- **404** - Not Found
 - **500** - Internal Server Error
 - **503** - Service Unavailable
 - **504** - Gateway Timeout
