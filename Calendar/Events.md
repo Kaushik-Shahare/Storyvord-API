@@ -20,8 +20,8 @@ GET /api/calendar/calendars/{project_id}/events/
         "id": 2,
         "title": "Project Kickoff meeting",
         "description": "Initial meeting to discuss project goals and timelines.",
-        "start_time": "2023-04-01T10:00:00Z",
-        "end_time": "2023-04-01T11:00:00Z",
+        "start": "2023-04-01T10:00:00Z",
+        "end": "2023-04-01T11:00:00Z",
         "location": "Conference Room A",
         "calendar": 2,
         "participants": [
@@ -32,8 +32,8 @@ GET /api/calendar/calendars/{project_id}/events/
         "id": 3,
         "title": "Project Kickoff Meeting",
         "description": "Initial meeting to discuss project goals and timelines.",
-        "start_time": "2023-04-01T10:00:00Z",
-        "end_time": "2023-04-01T11:00:00Z",
+        "start": "2023-04-01T10:00:00Z",
+        "end": "2023-04-01T11:00:00Z",
         "location": "Conference Room A",
         "calendar": 2,
         "participants": []
@@ -42,8 +42,8 @@ GET /api/calendar/calendars/{project_id}/events/
         "id": 4,
         "title": "Project Kickoff Meeting",
         "description": "Initial meeting to discuss project goals and timelines.",
-        "start_time": "2023-04-01T10:00:00Z",
-        "end_time": "2023-04-01T11:00:00Z",
+        "start": "2023-04-01T10:00:00Z",
+        "end": "2023-04-01T11:00:00Z",
         "location": "Conference Room B",
         "calendar": 2,
         "participants": []
@@ -52,8 +52,8 @@ GET /api/calendar/calendars/{project_id}/events/
         "id": 5,
         "title": "Project Kickoff Meeting",
         "description": "Initial meeting to discuss project goals and timelines.",
-        "start_time": "2024-04-01T10:00:00Z",
-        "end_time": "2024-04-01T11:00:00Z",
+        "start": "2024-04-01T10:00:00Z",
+        "end": "2024-04-01T11:00:00Z",
         "location": "Conference Room B",
         "calendar": 2,
         "participants": [
@@ -64,8 +64,8 @@ GET /api/calendar/calendars/{project_id}/events/
         "id": 6,
         "title": "Project Kickoff Meeting",
         "description": "Initial meeting to discuss project goals and timelines.",
-        "start_time": "2024-04-01T10:00:00Z",
-        "end_time": "2024-04-01T11:00:00Z",
+        "start": "2024-04-01T10:00:00Z",
+        "end": "2024-04-01T11:00:00Z",
         "location": "Conference Room B",
         "calendar": 2,
         "participants": []
@@ -74,8 +74,8 @@ GET /api/calendar/calendars/{project_id}/events/
         "id": 7,
         "title": "Project Kickoff Meeting",
         "description": "Initial meeting to discuss project goals and timelines.",
-        "start_time": "2024-04-01T10:00:00Z",
-        "end_time": "2024-04-01T11:00:00Z",
+        "start": "2024-04-01T10:00:00Z",
+        "end": "2024-04-01T11:00:00Z",
         "location": "Conference Room B",
         "calendar": 2,
         "participants": []
@@ -124,8 +124,8 @@ POST /api/calendar/calendars/{project_id}/events/
 {
     "title": "Project Kickoff Meeting",
     "description": "Initial meeting to discuss project goals and timelines.",
-    "start_time": "2024-04-01T10:00:00Z",
-    "end_time": "2024-04-01T11:00:00Z",
+    "start": "2024-04-01T10:00:00Z",
+    "end": "2024-04-01T11:00:00Z",
     "location": "Conference Room B",
     "participants": [1, 2, 3]
 }
@@ -138,8 +138,8 @@ POST /api/calendar/calendars/{project_id}/events/
     "id": 8,
     "title": "Project Kickoff Meeting",
     "description": "Initial meeting to discuss project goals and timelines.",
-    "start_time": "2024-04-01T10:00:00Z",
-    "end_time": "2024-04-01T11:00:00Z",
+    "start": "2024-04-01T10:00:00Z",
+    "end": "2024-04-01T11:00:00Z",
     "location": "Conference Room B",
     "calendar": 2,
     "participants": [1, 2, 3]
@@ -176,8 +176,8 @@ PUT /api/calendar/calendars/{project_id}/events/{event_id}
 {
     "title": "Project Kickoff Meeting",
     "description": "Initial meeting to discuss project goals and timelines.",
-    "start_time": "2024-04-01T10:00:00Z",
-    "end_time": "2024-04-01T11:00:00Z",
+    "start": "2024-04-01T10:00:00Z",
+    "end": "2024-04-01T11:00:00Z",
     "location": "Conference Room B",
     "participants": [1, 2, 3]
 }
@@ -190,8 +190,8 @@ PUT /api/calendar/calendars/{project_id}/events/{event_id}
     "id": 8,
     "title": "Project Kickoff Meeting",
     "description": "Initial meeting to discuss project goals and timelines.",
-    "start_time": "2024-04-01T10:00:00Z",
-    "end_time": "2024-04-01T11:00:00Z",
+    "start": "2024-04-01T10:00:00Z",
+    "end": "2024-04-01T11:00:00Z",
     "location": "Conference Room B",
     "calendar": 2,
     "participants": [1, 2, 3]
