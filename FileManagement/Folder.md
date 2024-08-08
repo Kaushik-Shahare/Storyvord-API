@@ -5,7 +5,7 @@
 ### HTTP Request
 
 ```http
-GET /api/files/crew/folders/{project_id}
+GET /api/files/folders/{project_id}
 ```
 
 ### Request Headers
@@ -22,8 +22,7 @@ GET /api/files/crew/folders/{project_id}
         "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-book-open-text\"><path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"></path><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"></path><path d=\"M6 8h2\"></path><path d=\"M6 12h2\"></path><path d=\"M16 8h2\"></path><path d=\"M16 12h2\"></path></svg>",
         "name": "Contracts",
         "project": "94924cd7-a0bf-4a0d-9a37-3d5f268f5e23",
-        "default": true,
-        "files": []
+        "default": true
     },
     {
         "id": 11,
@@ -31,8 +30,7 @@ GET /api/files/crew/folders/{project_id}
         "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-square-plus\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"></rect><path d=\"M8 12h8\"></path><path d=\"M12 8v8\"></path></svg>",
         "name": "Scripts & Development",
         "project": "94924cd7-a0bf-4a0d-9a37-3d5f268f5e23",
-        "default": true,
-        "files": []
+        "default": true
     },
     {
         "id": 12,
@@ -40,8 +38,7 @@ GET /api/files/crew/folders/{project_id}
         "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-file-spreadsheet\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"></path><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"></path><path d=\"M8 13h2\"></path><path d=\"M14 13h2\"></path><path d=\"M8 17h2\"></path><path d=\"M14 17h2\"></path></svg>",
         "name": "Sent Call Sheets",
         "project": "94924cd7-a0bf-4a0d-9a37-3d5f268f5e23",
-        "default": true,
-        "files": []
+        "default": true
     }
 ]
 ```
@@ -60,7 +57,7 @@ GET /api/files/crew/folders/{project_id}
 ### HTTP Request
 
 ```http
-POST /api/files/crew/folders/{project_id}
+POST /api/files/folders/{project_id}
 ```
 
 ### Request Headers

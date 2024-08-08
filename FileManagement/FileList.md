@@ -5,7 +5,7 @@
 ### HTTP Request
 
 ```http
-GET /api/files/crew/folders/files/{folder_id}/
+GET /api/files/folders/files/{folder_id}/
 ```
 
 ### Request Headers
@@ -17,25 +17,22 @@ GET /api/files/crew/folders/files/{folder_id}/
 ```json
 [
     {
-        "id": 2,
-        "description": null,
-        "icon": "2024-07-30 19:11:54.467495+00:00",
-        "name": "Folder 1",
-        "project": "3362a725-ca3c-4499-9f58-a798b34d9926",
-        "default": false,
-        "files": [
-            {
-                "id": 26,
-                "allowed_users": [
-                    1,
-                    2,
-                    34
-                ],
-                "name": "Cv",
-                "file": null,
-                "folder": 2
-            }
-        ]
+        "id": 31,
+        "allowed_users": [
+            5
+        ],
+        "name": "Cvvv",
+        "file": null,
+        "folder": 2
+    },
+    {
+        "id": 32,
+        "allowed_users": [
+            5
+        ],
+        "name": "Cvvvd",
+        "file": null,
+        "folder": 2
     }
 ]
 ```
@@ -56,7 +53,7 @@ GET /api/files/crew/folders/files/{folder_id}/
 ### HTTP Request
 
 ```http
-POST /api/files/crew/folders/files/{folder_id}/
+POST /api/files/folders/files/{folder_id}/
 ```
 
 ### Request Headers
