@@ -17,11 +17,6 @@ GET /api/files/{file_id}
 ```json
 {
     "id": 26,
-    "allowed_users": [
-        1,
-        2,
-        34
-    ],
     "name": "Cv",
     "file": null,
     "folder": 2
@@ -53,8 +48,7 @@ PUT /api/files/{file_id}
 ```json
 {
     "file": "file",
-    "add_users": [1, 2, 6, 3],
-    "remove_users": [3, 6]
+    "name": "Name",
 }
 ```
 
@@ -63,11 +57,6 @@ PUT /api/files/{file_id}
 ```json
 {
     "id": 26,
-    "allowed_users": [
-        1,
-        2,
-        34
-    ],
     "name": "Cv",
     "file": null,
     "folder": 2

@@ -18,18 +18,12 @@ GET /api/files/folders/files/{folder_id}/
 [
     {
         "id": 31,
-        "allowed_users": [
-            5
-        ],
         "name": "Cvvv",
         "file": null,
         "folder": 2
     },
     {
         "id": 32,
-        "allowed_users": [
-            5
-        ],
         "name": "Cvvvd",
         "file": null,
         "folder": 2
@@ -73,12 +67,8 @@ POST /api/files/folders/files/{folder_id}/
 ```json
 {
     "id": 29,
-    "allowed_users": [
-        34
-    ],
     "name": "Cvv",
-    "file": null,
-    "folder": 3
+    "file": null // Base64 encoded file
 }
 ```
 
